@@ -48,30 +48,54 @@ const TodoList: React.FC<TodoListProps> = ({
   return (
     <>
       <div className="todo-list">
-        {todos.map((todo, index) => (
-          <div className="todo-list-item" key={index}>
-            <div className="task">
-              <input
-                type="checkbox"
-                onChange={(e) => complete_todo(e, todo.id, todo)}
-              />
-              <p id="t_task" className={todo.completed ? "strike" : ""}>
-                {todo.task}
-              </p>
-            </div>
-            <div className="btn-container">
-              <div className="edit">
-                <TbEdit
-                  size={25}
-                  onClick={() => todoItem(todo.task, todo.id)}
-                />
+        {todos.length === 0 ? (
+          <h1
+            style={{
+              textAlign: "center",
+              marginBottom: "20px",
+              marginTop: "130px",
+              fontStyle: "italic",
+            }}
+          >
+            No tasks
+          </h1>
+        ) : (
+          <>
+            <p
+              style={{
+                textAlign: "center",
+                marginBottom: "20px",
+                fontSize: "18px",
+              }}
+            >
+              Your tasks:
+            </p>
+            {todos.map((todo, index) => (
+              <div className="todo-list-item" key={index}>
+                <div className="task">
+                  <input
+                    type="checkbox"
+                    onChange={(e) => complete_todo(e, todo.id, todo)}
+                  />
+                  <p id="t_task" className={todo.completed ? "strike" : ""}>
+                    {todo.task}
+                  </p>
+                </div>
+                <div className="btn-container">
+                  <div className="edit">
+                    <TbEdit
+                      size={25}
+                      onClick={() => todoItem(todo.task, todo.id)}
+                    />
+                  </div>
+                  <div className="del">
+                    <AiFillDelete size={25} onClick={() => delTodo(todo.id)} />
+                  </div>
+                </div>
               </div>
-              <div className="del">
-                <AiFillDelete size={25} onClick={() => delTodo(todo.id)} />
-              </div>
-            </div>
-          </div>
-        ))}
+            ))}
+          </>
+        )}
       </div>
 
       {toggle && (
