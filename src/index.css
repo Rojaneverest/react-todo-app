@@ -194,6 +194,7 @@ select:focus {
   color: white;
   border-radius: 5px;
   cursor: pointer;
+  margin-left: 10px;
 }
 
 .modal input {
