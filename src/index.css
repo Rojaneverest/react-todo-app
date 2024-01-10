@@ -26,7 +26,7 @@ body {
   border-radius: 8px;
 }
 
-.todo-search form input,
+.todo-input form input,
 select {
   border: 1px solid #ccc;
   height: 50px;
@@ -46,7 +46,7 @@ select:focus {
   outline: 2px solid orangered; /* Subdued color for focus */
 }
 
-.todo-search form button {
+.todo-input form button {
   height: 50px;
   width: 70px;
   padding: 0 10px;

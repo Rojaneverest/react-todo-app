@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Search from "./components/Search";
+import Search from "./components/Input";
 import TodoList from "./components/TodoList";
 import Filter from "./components/Filter";
 import stars from "../src/assets/starsbg.mp4";

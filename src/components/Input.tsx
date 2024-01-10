@@ -5,11 +5,11 @@ interface FormData {
   task: string;
 }
 
-interface SearchProps {
+interface InputProps {
   addTodo: (data: { task: string }) => void;
 }
 
-const Search: React.FC<SearchProps> = ({ addTodo }) => {
+const Search: React.FC<InputProps> = ({ addTodo }) => {
   const {
     register,
     handleSubmit,
@@ -23,7 +23,7 @@ const Search: React.FC<SearchProps> = ({ addTodo }) => {
   };
 
   return (
-    <div className="todo-search">
+    <div className="todo-input">
       <form action="" onSubmit={handleSubmit(onSubmit)}>
         <input
           type="text"
