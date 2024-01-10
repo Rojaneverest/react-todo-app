@@ -69,7 +69,7 @@ select {
 
 input:focus,
 select:focus {
-  outline: 1px solid #888; /* Subdued color for focus */
+  outline: 2px solid orangered; /* Subdued color for focus */
 }
 
 .todo-search form button {
@@ -186,7 +186,11 @@ select:focus {
   height: 40px;
   padding: 10px;
   border: none;
-  background-color: #888; /* Subdued color */
+  background-image: linear-gradient(
+    to right,
+    #ff6347,
+    #ff4500
+  ); /* Subdued color */
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -220,11 +224,19 @@ select:focus {
 }
 
 .showbtn {
-  background: #888; /* Subdued color */
+  background-image: linear-gradient(
+    to right,
+    #ff6347,
+    #ff4500
+  ); /* Subdued color */
 }
 
 .btn-container .cancel {
-  background: #888; /* Subdued color */
+  background-image: linear-gradient(
+    to right,
+    #ff6347,
+    #ff4500
+  ); /* Subdued color */
   margin-right: 10px;
 }
 
