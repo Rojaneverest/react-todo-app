@@ -117,7 +117,7 @@ const TodoList: React.FC<TodoListProps> = ({
                 onChange={(e) => setTask(e.target.value)}
                 required
               />
-              <button id="add">Add</button>
+              <button id="add">Update</button>
             </form>
             <div className="btn-container">
               <button

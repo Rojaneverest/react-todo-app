@@ -144,7 +144,7 @@ select:focus {
   border-radius: 5px;
   padding: 40px;
   text-align: center;
-  transition: 0.5s ease-in-out;
+  margin-top: 350px;
 }
 
 .modal form {
